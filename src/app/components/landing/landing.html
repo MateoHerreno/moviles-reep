@@ -8,7 +8,7 @@
                         <Image src="~/app/images/fondo_nav.png"></Image>
                         <FlexboxLayout class="completo_nav">
                             <button class="fas" backgroundColor="#CA2141" color="white" text="&#xf015;" (tap)="onTap()"></button>
-                            <button class="fas" backgroundColor="#CA2141" color="white" text="&#xf07a;"(tap)="productos()"></button>
+                            <button class="fas" backgroundColor="#CA2141" color="white" text="&#xf07a;"(tap)="productos_ir()"></button>
                             <button class="fas" backgroundColor="#CA2141" color="white" text="&#xf007;"(tap)="perfil()"></button>
                         </FlexboxLayout>
                     </AbsoluteLayout>
@@ -56,17 +56,11 @@
         <StackLayout row="2" justifyContent="center">
             <ScrollView orientation="horizontal">
                 <FlexboxLayout justifyContent="space-around">
-                    <AbsoluteLayout position="relative">
+                    <AbsoluteLayout position="relative" *ngFor="let producto of productos">
                         <Image class="completo_carta2" src="~/app/images/targetas_producto.png"></Image>
-                        <Image src="~/app/images/michelin.png" class="completo_carta_img2"></Image>
-                        <label text=" $ 543.00 " class="precio"></label>
-                        <label class="info_producto" text="Llantas michelin"></label>
-                    </AbsoluteLayout>
-                    <AbsoluteLayout position="relative">
-                        <Image class="completo_carta2" src="~/app/images/targetas_producto.png"></Image>
-                        <Image src="~/app/images/pirelli.png" class="completo_carta_img2"></Image>
-                        <label text=" $ 543.00 " class="precio"></label>
-                        <label class="info_producto" text="Llantas michelin"></label>
+                        <Image [src]="producto.foto" class="completo_carta_img2"></Image>
+                        <label text=" $ {{ producto.Precio }}" class="precio"></label>
+                        <label class="info_producto" text="{{ producto.nombre }}"></label>
                     </AbsoluteLayout>
                 </FlexboxLayout>
             </ScrollView>
