@@ -3,15 +3,14 @@ import { Component, OnInit } from '@angular/core'
 import { Page } from "@nativescript/core";
 
 @Component({
-  selector: 'landing',
-  templateUrl: './landing.html',
-  styleUrls: ['./landing.css']
+  selector: 'productoVer',
+  templateUrl: './productoVer.html',
+  styleUrls: ['./productoVer.css'],
 })
-export class LandingComponent implements OnInit {
+export class ProductoVerComponent implements OnInit {
   public constructor(private router: Router, private page: Page) {
     // Use the component constructor to inject providers.
   }
-
   ngOnInit(): void {
     this.page.actionBarHidden = true;
   }
@@ -24,4 +23,11 @@ export class LandingComponent implements OnInit {
   public productos(){
     this.router.navigate(["productos"])
   }
+  public cerrar_sesion(){
+    this.router.navigate(["login"])
+  }
+  public back(){
+    this.router.navigate([])
+  }
+  
 }
