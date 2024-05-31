@@ -7,14 +7,14 @@ button{
 }
 .divisor{
     background-color: #CA2141;
-    height:15%;
+    height:10%;
     width: 100%;    
-    margin-top: 50%;
+    margin-top: 40%;
 }
 .img_usuario{
     border-radius: 100%;
     width: 30%;
-    margin-top: 35%;
+    margin-top: 30%;
     margin-left: 35%;
 }
 
@@ -29,7 +29,7 @@ button{
     font-weight: bold;
     font-style: italic;
     font-size: 20%;
-    margin-top: 5%;
+
 }
 .centrado_sesion{
     margin-top: 25%;
