@@ -7,12 +7,12 @@
         <label class="centrado" text="Inicio de Sesion"></label>
         <label class="espacio2"></label>
           <StackLayout>
-            <Label text="E-MAIL " class="label_imput"></Label>
-            <TextField class="inputs"></TextField>
+            <Label text="E-MAIL" class="label_imput"></Label>
+            <TextField [text]="nick" class="inputs" (textChange)="inputChange($event, 'nick')"></TextField>
             <Label text="CONTRASEÑA" class="label_imput"></Label>
-            <TextField class="inputs" type="password"></TextField>
+            <TextField [text]="password" class="inputs" (textChange)="inputChange($event, 'password')" secure="true"></TextField>
             <label class="espacio2"></label>
-            <Button text="INGRESAR " [nsRouterLink]="['/landing']" pageTransition="slide" clearHistory="true"></Button>
+            <Button text="INGRESAR " (tap)="loguear()" pageTransition="slide" clearHistory="true"></Button>
             <Label class="label_noti" text="¿No tienes una cuenta?"></Label>
             <Button text="REGISTRARSE" [nsRouterLink]="['/registro']" pageTransition="slide"></Button>
           </StackLayout>
